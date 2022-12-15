@@ -21,4 +21,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\PortfolioV2.WebApp\PortfolioV2.WebApp.csproj" />
+  </ItemGroup>
+
 </Project>
