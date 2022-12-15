@@ -4,8 +4,10 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'https' " />
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'http' " />
   <ItemGroup>
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.1"/>
-    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="*"/>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.1" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="*" />
   </ItemGroup>
 </Project>

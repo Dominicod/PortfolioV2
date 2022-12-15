@@ -6,11 +6,8 @@ namespace PortfolioV2.WebApp.Controllers;
 
 public class DashboardController : Controller
 {
-    private readonly ILogger<DashboardController> _logger;
-
-    public DashboardController(ILogger<DashboardController> logger)
+    public DashboardController()
     {
-        _logger = logger;
     }
 
     public IActionResult Index()
