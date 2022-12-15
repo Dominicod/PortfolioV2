@@ -1,7 +1,7 @@
 version: 2.1
 
 orbs:
-  windows: circleci/windows@2.4
+  windows: circleci/windows@5.0.0
 
 jobs:
   test:
@@ -15,7 +15,6 @@ jobs:
             - dotnet-packages-v1-{{ checksum "PortfolioV2.WebApp/PortfolioV2.WebApp.csproj" }}
       - run:
           name: "Install project dependencies"
-          command: winget install Microsoft.DotNet.SDK.7
           command: dotnet restore
       - save_cache:
           paths:
