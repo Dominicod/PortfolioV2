@@ -12,14 +12,14 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - dotnet-packages-v1-{{ checksum "PortfolioV2/PortfolioV2.csproj" }}
+            - dotnet-packages-v1-{{ checksum "PortfolioV2.WebApp/PortfolioV2.WebApp.csproj" }}
       - run:
           name: "Install project dependencies"
-          command: dotnet.exe restore
+          command: dotnet restore
       - save_cache:
           paths:
             - C:\Users\circleci\.nuget\packages
-          key: dotnet-packages-v1-{{ checksum "PortfolioV2/PortfolioV2.csproj" }}
+          key: dotnet-packages-v1-{{ checksum "PortfolioV2.WebApp/PortfolioV2.WebApp.csproj" }}
       - run:
           name: "Run Application Tests"
           command: dotnet.exe test -v n --results-directory:test_coverage --collect:"Code Coverage"
