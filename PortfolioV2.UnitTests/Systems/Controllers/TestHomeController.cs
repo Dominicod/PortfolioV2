@@ -7,15 +7,10 @@ namespace PortfolioV2.UnitTests.Systems.Controllers;
 public class TestDashboardController
 {
     [Fact]
-    public void Controller_Index_Returns_ViewResult(){
-        // Arrange
+    public void Controller_Index_Returns_Vie(){
         var controller = new DashboardController();
-
-        // Act
         var result = controller.Index();
-
-        // Assert
         var viewResult = Assert.IsType<ViewResult>(result);
-        Assert.Null(viewResult.ViewName);
+        Assert.Equal("Index", viewResult?.ViewName);
     }
 }
