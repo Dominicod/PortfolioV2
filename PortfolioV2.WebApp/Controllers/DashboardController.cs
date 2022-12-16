@@ -6,16 +6,13 @@ namespace PortfolioV2.WebApp.Controllers;
 
 public class DashboardController : Controller
 {
-    private readonly ILogger<DashboardController> _logger;
-
-    public DashboardController(ILogger<DashboardController> logger)
+    public DashboardController()
     {
-        _logger = logger;
     }
 
     public IActionResult Index()
     {
-        return View();
+        return View("Index");
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

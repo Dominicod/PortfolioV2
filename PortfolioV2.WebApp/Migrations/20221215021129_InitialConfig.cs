@@ -19,12 +19,9 @@ namespace PortfolioV2.WebApp.Migrations
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityAlwaysColumn),
                     email = table.Column<string>(type: "text", nullable: false),
                     role = table.Column<string>(type: "text", nullable: false),
-                    passworddigest = table.Column<string>(name: "password_digest", type: "text", nullable: false)
+                    passworddigest = table.Column<string>(type: "text", name: "password_digest", nullable: false)
                 },
-                constraints: table =>
-                {
-                    table.PrimaryKey("users_pkey", x => x.id);
-                });
+                constraints: table => table.PrimaryKey("users_pkey", x => x.id));
 
             migrationBuilder.CreateIndex(
                 name: "users_email_key",
