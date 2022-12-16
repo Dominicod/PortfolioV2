@@ -7,7 +7,7 @@ namespace PortfolioV2.UnitTests.Systems.Controllers;
 public class TestDashboardController
 {
     [Fact]
-    public void Get_OnSuccess_ReturnsStatusCode200(){
+    public void Controller_Index_Returns_ViewResult(){
         // Arrange
         var controller = new DashboardController();
 
