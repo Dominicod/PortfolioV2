@@ -1,4 +1,7 @@
 using PortfolioV2.WebApp.Controllers;
+using Microsoft.AspNetCore.Mvc;
+using FluentAssertions;
+using System.Threading.Tasks;
 namespace PortfolioV2.UnitTests.Systems.Controllers;
 
 public class TestDashboardController
@@ -12,6 +15,7 @@ public class TestDashboardController
         var result = controller.Index();
 
         // Assert
-        result.StatusCode.Should().Be(200);
+        var viewResult = Assert.IsType<ViewResult>(result);
+        Assert.Null(viewResult.ViewName);
     }
 }
